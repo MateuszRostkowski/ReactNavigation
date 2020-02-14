@@ -1,10 +1,10 @@
 import 'react-native-gesture-handler'
-// In App.js in a new project
 
 import * as React from 'react';
 import { View, Text, Button } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs"
 
 function HomeScreen({ navigation }){
   return (
@@ -46,15 +46,15 @@ function DetailsScreen({ navigation }) {
   );
 }
 
-const Stack = createStackNavigator();
+const Tab = createBottomTabNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home" >
-        <Stack.Screen name="Home" component={HomeScreen} options={{ title: "Overview"}}/>
-        <Stack.Screen name="Details" component={DetailsScreen} />
-      </Stack.Navigator>
+      <Tab.Navigator>
+        <Tab.Screen name="Home" component={HomeScreen} />
+        <Tab.Screen name="Settings" component={DetailsScreen} />
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
