@@ -17,13 +17,13 @@
 }
 ```
 
-2. Add this to `Podfile`
+2. Add this to `ios/Podfile` - for IOS
 
 ```ruby
 pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 ```
 
-3. Add this to `Info.plist`
+3. Add this to `ios/../Info.plist` - for IOS
 
 ```Plist
 <key>UIAppFonts</key>
@@ -46,7 +46,17 @@ pod 'RNVectorIcons', :path => '../node_modules/react-native-vector-icons'
 </array>
 ```
 
-4. Add this imports to your file
+4. Add this to `android/build.gradle` - for ANDROID
+
+```javascript
+project.ext.vectoricons = [
+    iconFontNames: [ 'Feather.ttf', 'Ionicons.ttf' ] // Name of the font files you want to copy
+]
+
+apply from: "../../node_modules/react-native-vector-icons/fonts.gradle"
+```
+
+5. Add this imports to your file
 
 ```javascript
 // this needs to be added in root file
