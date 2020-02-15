@@ -1,11 +1,11 @@
 import 'react-native-gesture-handler';
-import * as React from 'react';
+import React from 'react';
 import {View, Text, Button} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/Ionicons'
-import FeatherIcon from 'react-native-vector-icons/Feather'
+import Icon from 'react-native-vector-icons/Ionicons';
+import FeatherIcon from 'react-native-vector-icons/Feather';
 
 function HomeScreen({navigation}) {
   return (
